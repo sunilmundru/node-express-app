@@ -1,4 +1,4 @@
-const express = require('express')
+lconst express = require('express')
 const app = express()
 
 const hostname = '127.0.0.1'   // set constants
@@ -18,11 +18,15 @@ app.get('/big',  (req, res) =>{
 
 app.get('/greeting/:id',  (req, res) =>{
   res.send('Hello! The id was ' + req.params.id)
-})
 
+})
 app.get('/yo/:buddy',  (req, res) =>{
   res.send('<h1>Yo, ' + req.params.buddy + '!</h1>')
 })
+app.get('/sample',  (req, res) =>{
+  res.send('<h1>welcome to my page </h1>')
+})
+
 
 // handle non-existant routes
 app.use((req, res, next) => {
